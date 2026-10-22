@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: travel-poster-studio
+    runtime: docker
+    plan: starter
+    healthCheckPath: /api/health
+    envVars:
+      - key: IMAGE_PROVIDER
+        value: gemini
+      - key: GEMINI_API_KEY
+        sync: false
